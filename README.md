@@ -11,7 +11,22 @@ To Develop a python program to Plot a time series data (population/ market price
 4. Plot the data according to need and can be altered monthly, or yearly.
 5. Display the graph.
 # PROGRAM:
-
+```
+import pandas as pd
+import matplotlib.pyplot as plt
+import seaborn as sns
+```
+```
+data = pd.read_csv("C:/Users/SEC/Downloads/archive(1)/manufacturing_6G_dataset.csv")
+```
+```
+data.set_index('Timestamp', inplace=True)
+```
+```
+sns.histplot(data["Temperature_C"], bins=30, kde=True, color="blue")
+plt.title("Temperature Distribution")
+plt.show()
+```
 
 
 
@@ -24,6 +39,7 @@ To Develop a python program to Plot a time series data (population/ market price
 
 # OUTPUT:
 
+![Screenshot 2025-03-04 143900](https://github.com/user-attachments/assets/4a87052f-700a-4f84-a0d7-cfb9231db860)
 
 
 
